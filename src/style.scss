@@ -34,6 +34,15 @@ ul {
   .content {
     margin: 10px 20px 10px 20px;
     height: 60%;
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    a {
+      margin-bottom: 20px;
+    }
     .title-disp {
       p {
         color: $secondary;
@@ -71,6 +80,9 @@ ul {
       margin: 10px 0 40px 10px;
       width: 150px;
       height: 50px;
+      &:focus {
+        outline: none;
+      }
     }
   }
 }
@@ -88,6 +100,9 @@ ul {
     width: 200px;
     border: none;
     margin: 20px;
+    &:focus {
+      outline: none;
+    }
   }
 }
 
@@ -109,7 +124,7 @@ ul {
       background-color: rgb(121, 121, 121);
     }
     p:first-child {
-      font-size: 30px;
+      font-size: 27px;
       padding-top: 20px;
       margin-bottom: 10px;
       color: $secondary;

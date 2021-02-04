@@ -12,14 +12,13 @@ const Notes = ({ handleShow, createNote }) => {
     const getItem = localStorage.getItem(localStorage.key(i));
     arr.push(converter.makeHtml(localStorage.key(i)) + converter.makeHtml(getItem));
   }
-  const sortedArr = arr.sort();
 
   const createMarkup = (item) => ({ __html: item });
   return (
     <div className="left">
       <button type="button" onClick={createNote}>Nouvelle note</button>
       <ul className="list">
-        {sortedArr.map((item, index) => (
+        {arr.map((item, index) => (
           <li key={index} onClick={() => handleShow(index)}>
             <div dangerouslySetInnerHTML={createMarkup(item)} />
           </li>
